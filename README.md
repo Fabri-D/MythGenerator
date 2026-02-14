@@ -20,7 +20,7 @@ The development process included:
 4. Reduction to **370 curated articles**.
 5. Structured JSON formatting.
 6. Conversion into GPT-2–compatible training sequences.
-7. Addition of structural dialogue tokens (`USER`, `ASSISTANT`) to simulate conditional prompting.
+7. Insertion of structured control tokens and dialogue-style markers (e.g., USER / ASSISTANT) to simulate conditional narrative prompting.
 8. Fine-tuning of GPT-2 on the curated dataset.
 
 The objective was not general storytelling, but stylistically coherent myth-style narrative generation.
