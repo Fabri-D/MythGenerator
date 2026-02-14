@@ -148,3 +148,14 @@ It represents an early exploration of deterministic structure combined with gene
 All generated content is fictional and produced by a fine-tuned language model trained on publicly available mythological sources.
 
 This project is intended for research and experimental purposes only.
+
+---
+
+## Data Source
+
+Training data was compiled from publicly available mythological articles retrieved via the Wikipedia API.
+
+Wikipedia content is available under the Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0).
+
+The repository does not include raw Wikipedia articles or dataset copies.
+The published model weights are the result of a fine-tuning process and do not redistribute original source material.
