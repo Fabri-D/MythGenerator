@@ -100,13 +100,31 @@ Watch here:
 
 This repository includes:
 
-- `interfaz.py` — graphical inference interface  
-- `model/` — fine-tuned GPT-2 model weights  
+- `interfaz.py` — graphical interface for local inference  
+- `model/` — fine-tuned GPT-2 model weights used by the application  
 - Example output screenshots  
 - Video explanation  
 - Documentation  
 
-The dataset, preprocessing scripts, and training pipeline used for fine-tuning are **not included** in this repository.
+The included model corresponds to a fine-tuned GPT-2 checkpoint adapted to the curated mythological dataset.
+
+The dataset, preprocessing scripts, and training pipeline used during fine-tuning are not distributed in this repository.
+
+---
+
+## ▶ Running the Application
+
+Requirements:
+
+- Python 3.9+
+- PyTorch
+- HuggingFace Transformers
+
+Install dependencies:
+
+```bash
+pip install torch transformers
+python interfaz.py
 
 ---
 
