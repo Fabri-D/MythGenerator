@@ -125,6 +125,7 @@ Install dependencies:
 ```bash
 pip install torch transformers
 python interfaz.py
+```
 
 ---
 
