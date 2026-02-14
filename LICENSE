@@ -19,14 +19,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-
----
-
-## Data Source
-
-Training data was compiled from publicly available mythological articles retrieved via the Wikipedia API.
-
-Wikipedia content is available under the Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0).
-
-The repository does not include raw Wikipedia articles or dataset copies.
-The published model weights are the result of a fine-tuning process and do not redistribute original source material.
