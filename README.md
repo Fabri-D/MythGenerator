@@ -1,8 +1,8 @@
 # 🐉 MythGenerator
 
-**MythGenerator** is a text-generation AI project designed to create original mythological narratives based on user prompts.
+**MythGenerator** is a domain-specific GPT-2 text generation system fine-tuned to produce original mythological narratives from structured prompts.
 
-The system was trained using a curated dataset of mythological creatures from multiple cultures around the world, allowing it to generate fictional myths inspired by ancient traditions, folklore structures, and symbolic motifs.
+The model was trained on a curated dataset of mythological entities across multiple cultures and then deployed as a standalone inference application with a graphical interface.
 
 > ⚠️ All AI-generated content is fictional.
 
@@ -10,53 +10,72 @@ The system was trained using a curated dataset of mythological creatures from mu
 
 ## 📌 Project Overview
 
-The project began with the creation of an extensive list of mythological creatures from different cultures worldwide. Using ChatGPT, a total of **470 mythological entity names** were compiled.
+MythGenerator explores controlled creative text generation through domain-specific fine-tuning.
 
-Then:
+The development process included:
 
-- The **Wikipedia API** was used to extract English articles related to each creature.
-- A filtering process ensured only relevant articles were included (e.g., containing terms like *"mythical"*).
-- The dataset was reduced to **370 high-quality articles**.
-- The content was structured and stored in JSON format for processing.
-- The text was tokenized and formatted according to GPT-2 training specifications.
-- Special tokens such as `USER` and `ASSISTANT` were added to help the model understand structure.
-- The model was trained and fine-tuned to generate mythological text based on user prompts.
+1. Compilation of **470 mythological entities** across cultures.
+2. Automated content retrieval via the **Wikipedia API**.
+3. Filtering and cleaning for mythologically relevant material.
+4. Reduction to **370 curated articles**.
+5. Structured JSON formatting.
+6. Conversion into GPT-2–compatible training sequences.
+7. Addition of structural dialogue tokens (`USER`, `ASSISTANT`) to simulate conditional prompting.
+8. Fine-tuning of GPT-2 on the curated dataset.
+
+The objective was not general storytelling, but stylistically coherent myth-style narrative generation.
+
+---
+
+## 🧠 Model Architecture
+
+- Base model: **GPT-2**
+- Framework: **HuggingFace Transformers**
+- Backend: **PyTorch**
+- Training objective: Autoregressive (causal language modeling)
+- Optimization: Token-level cross-entropy
+- Conditioning: Structured prompt formatting
+
+The model generates continuations from prompts of the form:
+
+> "In an ancient world, there was a myth of..."
+
+and produces culturally-inspired myth narratives.
 
 ---
 
 ## 🖥️ Application Interface
 
-The application provides a simple graphical interface:
+The repository includes a runnable graphical interface built in Python.
 
-- A prompt input field  
-- A "Generate" button  
-- A text output area where the generated myth appears  
+Features:
 
-Users can enter prompts such as:
+- Prompt input field  
+- Generate button  
+- Text output panel  
+- Local inference using the fine-tuned model  
 
-> "In an ancient world, there was a myth of a cave wolf..."
-
-And the model generates a fictional myth narrative based on that input.
+The interface allows real-time generation without requiring retraining.
 
 ---
 
-## 🐺 Example 1 — Cave Wolf
+## 🐺 Example — Cave Wolf
 
 Prompt:
 > "In an ancient world, there was a myth of a cave wolf"
 
-Generated output example:
+Generated output:
 
 ![Cave Wolf Example](cap01.jpg)
 
 ---
 
-## 🦊 Example 2 — Shadow Fox
+## 🦊 Example — Shadow Fox
 
 Prompt:
 > "In an ancient world, there was the myth of the Shadow Fox"
 
-Generated output example:
+Generated output:
 
 ![Shadow Fox Example](cap02.jpg)
 
@@ -64,43 +83,49 @@ Generated output example:
 
 ## 🎥 Video Explanation (Spanish)
 
-This repository includes a full video explanation in Spanish describing:
+This repository includes a full explanation video covering:
 
-- The dataset creation process  
-- The filtering methodology  
-- The training pipeline  
-- The final application  
+- Dataset construction  
+- Filtering methodology  
+- Fine-tuning pipeline  
+- Application design  
 
-You can watch it here:
+Watch here:
 
 👉 https://github.com/Fabri-D/MythGenerator/blob/master/MythGeneratorVideo.mp4
 
 ---
 
-## 🧠 Technologies Used
+## 📦 Repository Contents
 
-- Python  
-- Wikipedia API  
-- GPT-2 fine-tuning  
-- JSON data structuring  
-- NLP preprocessing and tokenization  
+This repository includes:
+
+- `interfaz.py` — graphical inference interface  
+- `model/` — fine-tuned GPT-2 model weights  
+- Example output screenshots  
+- Video explanation  
+- Documentation  
+
+The dataset, preprocessing scripts, and training pipeline used for fine-tuning are **not included** in this repository.
 
 ---
 
-## 📚 Purpose
+## 🧪 Purpose
 
-MythGenerator is an experimental AI project that explores:
+MythGenerator serves as an experimental demonstration of:
 
-- Creative AI text generation  
-- Cultural mythological structures  
-- Data curation and model fine-tuning  
-- Controlled fictional narrative generation  
+- Domain-specific language model fine-tuning  
+- Cultural dataset curation  
+- Controlled generative modeling  
+- Structured prompt conditioning  
+- Creative AI prototyping  
 
-It demonstrates how structured cultural datasets can be used to train generative language models for creative applications.
+It represents an early exploration of deterministic structure combined with generative language modeling.
 
 ---
 
 ## ⚠️ Disclaimer
 
-All content generated by MythGenerator is fictional and created by an AI model trained on publicly available mythological data.
+All generated content is fictional and produced by a fine-tuned language model trained on publicly available mythological sources.
 
+This project is intended for research and experimental purposes only.
